@@ -4,8 +4,8 @@ line = input()
 symbol = input()
 
 index = 0
-for i in line:
-    if i == symbol:
+for char in line:
+    if char == symbol:
         print(index)
         break
     index += 1

@@ -13,4 +13,8 @@ for i in line[:-1]:
     if i == symbol:
         continue
     new_line += i + symbol
-print(new_line+line[-1])
+print(new_line + line[-1])
+
+# -------------------------
+
+# TODO: Переделать используя индексы в циклы

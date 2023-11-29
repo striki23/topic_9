@@ -1,11 +1,15 @@
 # Программа проверяет, является ли введенная строка числом (целым или с плавающей точкой).
 # Выводит True в случае если number число, False в ином случае
 
-number = input()
+number: str = input()
+
+digits: str = '0123456789'
+signs: str = '+-.'
+is_num: bool = ...
 
 for i in number:
-    if i not in '+-0123456789. ':
+    if i not in ...:
         print(False)
         break
-else:
-    print(True)
+
+print(is_num)

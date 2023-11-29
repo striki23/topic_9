@@ -1,9 +1,9 @@
 # Программа, подсчитывает количество символов заданной строки
 # Нельзя использовать встроенные функции и методы
-line = input()
+line: str = input()
 
-counter = 0
-for i in line:
+counter: int = 0
+for _ in line:
     counter += 1
 
 print(counter)
