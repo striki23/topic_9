@@ -5,7 +5,7 @@ line = input()
 
 vowels: str = 'AaEeIiOoUuАаИиОоУуЫыЭэЁёЕеЮюЯя'
 consonants: str = ('BbCcDdFfGgHhJjKkLlMm'
-                   'NnPhQqRrSsTtVvWwXxYyZz'
+                   'NnPpQqRrSsTtVvWwXxYyZz'
                    'БбВвГгДдЖжЗзЙйКкЛлМмЬьЪъ'
                    'НнПпРрСсТтФфХхЦцЧчШшЩщ')
 vowels_counter = 0
@@ -17,5 +17,4 @@ for i in line:
     elif i in consonants:
         consonants_counter += 1
 
-print(vowels_counter)
-print(consonants_counter)
+print(vowels_counter, consonants_counter, sep='\n')
