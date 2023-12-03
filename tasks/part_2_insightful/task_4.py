@@ -1,11 +1,11 @@
+# Программа принимает на вход строку и преобразует её в три варианта записи
+# camelCase, PascalCase и snake_case
+line: str = input()
+capital_line: list[str, ...] = (line.title()).split()
 
-user_line = input().lower()
-line1 = user_line.title()
 
-s1 = 'camel' + (''.join(line1.split()))
-s2 = 'Pascal' + (''.join(line1.split()))
-s3 = 'snake' + '_' + ('_'.join(user_line.split()))
+s1 = 'camel' + (''.join(capital_line))
+s2 = 'Pascal' + (''.join(capital_line))
+s3 = 'snake_' + ('_'.join(line.lower().split()))
 
-print(s1)
-print(s2)
-print(s3)
+print(s1, s2, s3, sep='\n')

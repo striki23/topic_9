@@ -1,8 +1,8 @@
 # Программа принимает строку и символ, затем подсчитывает,
 # сколько раз символ встречается в строке, без учета регистра.
 
-line = input().lower()
-symbol = input().lower()
+line: str = input().lower()
+symbol: str = input().lower()
 
 if symbol not in line:
     print(False)

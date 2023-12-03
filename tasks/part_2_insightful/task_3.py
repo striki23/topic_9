@@ -5,5 +5,5 @@
 line = input().lower()
 wrong = [' ', '-', ',']
 for symbol in wrong:
-     line = line.replace(symbol, '')
+    line = line.replace(symbol, '')
 print(line == line[::-1])
