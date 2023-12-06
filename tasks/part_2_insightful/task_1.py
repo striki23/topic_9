@@ -1,8 +1,8 @@
 """Программа принимает строку и подсчитывает количество слов в ней."""
 
-line: str = input().split()
+chars: list = input().split()
 
-if not line:
+if not chars:
     print(False)
 else:
-    print(len(line))
+    print(len(chars))

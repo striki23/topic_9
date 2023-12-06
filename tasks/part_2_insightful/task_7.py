@@ -16,8 +16,8 @@ while True:
     elif password.isalnum():
         print('ПРЕДУПРЕЖДЕНИЕ: Ваш пароль состоит только из букв и цифр')
         if input('Хотите добавить специальные символы?(y/N):') not in 'Yy':
-            print('\nПароль принят!')
             break
     else:
-        print('\nПароль принят!')
         break
+
+print('\nПароль принят!')
