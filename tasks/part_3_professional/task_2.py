@@ -14,19 +14,33 @@ while True:
         print('Введите числовое значение (номер операции)')
         continue
 
+    # number = input(
+    #     '\nВыберите операцию (0 для выхода):'
+    #     '\n1. Конвертировать рубли в доллары'
+    #     '\n2. Конвертировать доллары в рубли'
+    #     '\nВведите номер операции: '
+    # )
+    # if not number.isdigit():
+    #     print('Введите числовое значение (номер операции)')
+    #     continue
+
     if number == 0:
         print('До свидания!')
         break
 
-    elif number == 1:
-        rate = float(input('Введите курс доллара к рублю:'))
-        budget = float(input('Введите количество рублей:'))
-        print(f'Вы получите {(budget * rate):.2f} USD\n')
+    if number not in (1, 2):
+        print('Неверный выбор операции. Попробуйте ещё раз.')
+        continue
 
-    elif number == 2:
-        rate = float(input('Введите курс рубля к доллару:'))
-        budget = float(input('Введите количество долларов:'))
-        print(f'Вы получите {(budget * rate):.2f} RUB\n')
+    rate_hint = 'Введите курс доллара к рублю:'
+    budget_hint = 'Введите количество рублей:'
+    sign = 'USD'
 
-    else:
-        print('Неверный выбор операции. Попробуйте ещё раз.\n')
+    if number == 2:
+        rate_hint = 'Введите курс рубля к доллару:'
+        budget_hint = 'Введите количество долларов:'
+        sign = 'RUB'
+
+    rate = float(input(rate_hint))
+    budget = float(input(budget_hint))
+    print(f'Вы получите {(budget * rate):.2f} {sign}\n')

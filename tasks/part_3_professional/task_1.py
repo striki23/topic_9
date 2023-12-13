@@ -4,6 +4,6 @@
 line: str = input()
 
 # определяем общую длину строки и добавляем 10 (5 '~' с каждой стороны)
-length: int = len(line)+10
+length: int = len(line) + 10
 
 print(f"{line:~^{length}}")

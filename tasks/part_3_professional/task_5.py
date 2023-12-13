@@ -12,7 +12,7 @@ while True:
         break
     names.append(name_user)
 
-# определяем макс длину фамилии
+    # определяем макс длину фамилии
     lenght_surname = len(name_user[0])
     if lenght_surname > max_surname:
         max_surname = lenght_surname
@@ -21,8 +21,6 @@ while True:
 print(f"{'№':^3} {'ФИО':^{max_surname}}")
 
 # заводим счетчик номеров
-n = 1
-for name in names:
-    fio = f'{name[0].title()} {name[1][0].title()}.{name[2][0].title()}.'
-    print(f"{n:02} | {fio}")
-    n += 1
+for idx, name in enumerate(names, start=1):
+    fio = f'{name[0].title()} {name[1][0].upper()}.{name[2][0].upper()}.'
+    print(f"{idx:02} | {fio}")
