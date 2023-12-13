@@ -2,13 +2,7 @@
 line: str = input().lstrip()
 
 vowels: str = 'AaEeIiOoUuАаИиОоУуЫыЭэЁёЕеЮюЯя'
-symbol_swap: str = '?' * 30
+symbol_swap: str = '?' * len(vowels)
+
 tbl: dict = line.maketrans(vowels, symbol_swap)
 print(line.translate(tbl))
-
-
-# vowels: str = 'AaEeIiOoUuАаИиОоУуЫыЭэЁёЕеЮюЯя'
-#
-# for symbol in vowels:
-#     line = line.replace(symbol, '?')
-# print(line)
